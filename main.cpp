@@ -1,10 +1,8 @@
 #include<QtWidgets>
-#include<firstwindow.h>
+#include<mywindow.h>
 int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
-    FirstWindow window;
-    window.Show();
-    window.Connect();
+    MyWindow window;
     return a.exec();
 }

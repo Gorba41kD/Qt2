@@ -2,15 +2,15 @@
 #define ERRORWINDOW_H
 #include<QWidget>
 #include<QtWidgets>
+#include<memory>
 class ErrorWindow : public QWidget
 {
     Q_OBJECT
 private:
-    QLabel lbl;
+     std::unique_ptr<QLabel> lbl;
+     std::unique_ptr<QBoxLayout> box;
 public:
     ErrorWindow();
-    QLabel& label();
-    void Show();
 };
 
 #endif // ERRORWINDOW_H
