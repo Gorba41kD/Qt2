@@ -31,7 +31,7 @@ void MyWindow::slotInfo()
         int secondValue = std::stoi(line2->text().toStdString());
         lbl->setText(QString::number(firstValue + secondValue));
     }
-    catch(std::exception& exc)
+    catch(const std::invalid_argument& exc)
     {
         window = std::make_unique<ErrorWindow>();
     }

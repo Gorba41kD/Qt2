@@ -6,5 +6,6 @@ ErrorWindow::ErrorWindow()
     this->setGeometry(400,600,300,220);
     lbl->setText("You entered wrong value.Please try again");
     box->addWidget(lbl.get());
+    this->setLayout(box.get());
     this->show();
 }
